@@ -49,6 +49,7 @@ def menu_tipo_orden_lista():
 
 def mostrar_menu():
     lista_parseada = parseo_csv("data\Proyectos.csv")
+    parsear_lista_json(lista_parseada)
     datos_normalizado = normalizar_datos(lista_parseada)
     if datos_normalizado == True:
         print("Datos normalizados listo para usar")
@@ -83,7 +84,8 @@ def mostrar_menu():
                     proyectos_vencidos = validar_fecha_actual_superior(lista_parseada)
                     if proyectos_vencidos:
                         limpiar_consola()
-                        
+                        parsear_lista_json(lista_parseada)
+                        parsear_lista_csv(lista_parseada)
                         print("Los proyectos vencidos fueron modificados y cambiados a finalizado\n\n")
                 case 5:
                     limpiar_consola()
@@ -95,7 +97,7 @@ def mostrar_menu():
                 case 7:
                     limpiar_consola()
                     imprimir_todos_proyectos(lista_parseada)
-                    nombre_proyecto = buscar_proyecto_por_nombre("Ingrese el nombre del proyecto que desea buscar: ")
+                    nombre_proyecto = buscar_proyecto_por_nombre("Ingrese el nombre del proyecto que desea buscar, respetando sus acentos: ")
                     busqueda_proyecto_nombre = buscar_proyecto_id_str(nombre_proyecto,lista_parseada,"Nombre del Proyecto")
                     if isinstance(busqueda_proyecto_nombre,dict):
                         limpiar_consola()
@@ -139,5 +141,21 @@ def mostrar_menu():
                     limpiar_consola()
                     imprimir_todos_proyectos(lista_parseada)
                     retomar_proyecto(lista_parseada)
-
-
+                    parsear_lista_json(lista_parseada)
+                    parsear_lista_csv(lista_parseada)
+                
+                case 10:
+                    limpiar_consola()
+                    imprimir_todos_proyectos(lista_parseada)
+                    generar_reporte_presupuesto(lista_parseada)
+                case 11:
+                    limpiar_consola()
+                    imprimir_todos_proyectos(lista_parseada)
+                    generar_reporte_proyecto(lista_parseada)
+                case 12:
+                    limpiar_consola()
+                    parsear_lista_json(lista_parseada)
+                    parsear_lista_csv(lista_parseada)
+                    finalizar_programa()
+                case 13:
+                    pass

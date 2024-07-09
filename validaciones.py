@@ -6,10 +6,14 @@ from prettytable import *
 
 
 def limpiar_consola():
+    """Esta funcion limpia la consola
+    """
     os.system("cls")
 
 
 def finalizar_programa():
+    """Esta funcion finaliza el programa
+    """
     print("programa finalizado")
     sys.exit()
 
@@ -203,7 +207,7 @@ def buscar_proyecto_por_nombre(mensaje):
     ingresar_nombre_proyecto = input(mensaje)
     return ingresar_nombre_proyecto
 
-def buscar_proyecto_id_str(valor: int | str, lista_proyectos: list[dict], key: str) -> dict | None:
+def buscar_proyecto_id_str(valor: int | str, lista_proyectos: list[dict], key: str):
     """Esta función busca un valor en la lista de diccionarios para poder retornar el diccionario con el mismo.
 
     Args:
@@ -214,10 +218,19 @@ def buscar_proyecto_id_str(valor: int | str, lista_proyectos: list[dict], key: s
     Returns:
         dict | None: Retorna el diccionario encontrado con el mismo valor del que se le está buscando, o None si no se encuentra.
     """
+    lista_repetidos = []
     for proyecto in lista_proyectos:
         if str(proyecto.get(key)) == str(valor):
-            return proyecto
-    return None
+            lista_repetidos.append(proyecto)
+    if len(lista_repetidos) == 1:
+        return lista_repetidos[0]
+    elif len(lista_repetidos) == 0:
+        return None
+    else:
+        imprimir_todos_proyectos(lista_repetidos)
+        buscar_por_id = buscar_proyecto_por_nombre("Hay mas de un proyecto con el mismo nombre, indique por id el que esta buscando: ")
+        buscar_id = buscar_proyecto_id_str(buscar_por_id,lista_repetidos,"id")
+        return buscar_id
 
 
 
@@ -454,6 +467,11 @@ def ordenar_lista_diccionarios(lista_proyectos: list[dict], orden: bool, valor_a
         print("No indico el valor a ordenar")
 
 def retomar_proyecto(lista_proyectos:list[dict]):
+    """Esta funcion retoma todos los proyectos que esten Cancelados y los pasa a Activo
+
+    Args:
+        lista_proyectos (list[dict]): Lista de diccionarios para iterar y recorrer
+    """
     id_proyecto = int(input("Ingrese el ID del proyecto a retomar: "))
     for proyecto in lista_proyectos:
         if proyecto["id"] == id_proyecto:
@@ -465,3 +483,13 @@ def retomar_proyecto(lista_proyectos:list[dict]):
                 print("El proyecto no se puede retomar porque no está cancelado.")
                 return
     print("ID de proyecto no encontrado.")
+
+
+def obtener_fecha_actual():
+    """Obtiene la fecha actual sin la hora.
+
+    Returns:
+        str: Fecha actual en formato 'dd-mm-aaaa'.
+    """
+    fecha_actual = datetime.today().date()
+    return fecha_actual.strftime("%d-%m-%Y")
