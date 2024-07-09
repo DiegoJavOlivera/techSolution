@@ -1,0 +1,15 @@
+id,Nombre del Proyecto,Descripción,Fecha de inicio,Fecha de Fin,Presupuesto,Estado
+4,Red de Transporte Publico,Mejora y ampliación de la infraestructura de transporte público,30-03-2023,24-07-2023,937383174,Activo
+3,Sistema de Informacion Epidemiológica,Plataforma para el seguimiento y análisis de datos epidemiológicos,14-06-2023,02-02-2024,850312588,Activo
+2,Sistema de Planificación de Recursos,Desarrollo de un sistema avanzado de planificación de recursos empresariales,17-07-2023,18-05-2025,642055083,Activo
+9,Investigacion de Trastornos del Sueño,Estudio y tratamiento de diversos trastornos del sueño,23-05-2023,03-08-2023,555060646,Cancelado
+6,Laboratorio de Microbiologia,Investigación y desarrollo en microbiología aplicada,13-07-2023,07-10-2025,325746996,Activo
+10,Sistema de Incendios Extremo,Desarrollo de un sistema avanzado de prevención y control de incendios,14-02-2023,03-04-2023,240045465,Cancelado
+7,Planificación de Sucesion,Desarrollo de un sistema para la planificación de la sucesión en empresas,01-01-2023,20-05-2023,231786436,Finalizado
+5,Gestion de musica,Desarrollo musical basado en codigo binario,06-06-2021,03-02-2030,149912234,Activo
+8,Sistema de Gestión de Documentos,Desarrollo de un sistema para la gestión y archivo de documentos,06-09-2023,19-05-2023,65296214,Cancelado
+1,Plataforma de Gestion Empresarial,Sistema de gestión de recursos empresariales para mejorar la eficiencia operativa,13-10-2023,17-04-2025,42931805,Activo
+13,Desarrollo de sistemas,Creacion de software inteligentes,13-05-2024,15-09-2035,15456456,Activo
+12,Distribucion de recursos,Reparto de materiales de produccion,13-05-1999,13-05-2023,1500654,Finalizado
+14,Creacion de videojuegos,Desarrollo de sistemas ludicas,13-05-2021,13-06-2029,789456,Activo
+11,Gestion de dinero,Gestion de recursos economicos,13-05-1998,13-12-2021,756045,Finalizado
