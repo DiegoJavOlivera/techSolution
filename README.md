@@ -13,7 +13,7 @@ Este proyecto es parte de un parcial universitario desarrollado por Diego Javier
 
 ## Requisitos
 
-Para ejecutar este proyecto, necesitas tener instalado Python  y las siguientes instalada y importada bibliotecas:
+Para ejecutar este proyecto debe ejecutarlo desde el archivo main.py, necesitas tener instalado Python  y las siguientes instalada y importada bibliotecas:
 
 - PrettyTable
 - datetime
