@@ -7,11 +7,15 @@ from submenu import *
 
 
 def presentacion():
+    """Imprime un saludo de bienvenida al usuario
+    """
     print("********************************************************")
     print("***********  Bienvenidos a TechSolution   **************")
     print("********************************************************")
 
 def imprimir_menu():
+    """Imprime el menu principal del programa
+    """
     presentacion()
     print("Menu de opciones: seleccione una opcion numerica para comenzar."
             "\n1. Ingresar proyecto"
@@ -30,14 +34,7 @@ def imprimir_menu():
             "\n14. Top 3 de proyectos activos con menor presupuesto")
 
 def menu_tipo_orden_lista():
-    """print("Menu de ordenamiento, seleccione un tipo de orden: "
-            "\n1. Ordenar por nombre de mayor a menor"
-            "\n2. Ordenar por nombre de menor a mayor"
-            "\n3. Ordenar por presupuesto de mayor a menor"
-            "\n4. Ordenar por presupuesto de menor a mayor"
-            "\n5. Ordenar por fecha de inicio de mayor a menor"
-            "\n6. Ordenar por fecha de inicio de menor a mayor")
-
+    """Imprime el menu de orden para la opcion 8
     """
     print("Menu de ordenamiento, seleccione un tipo de orden: "
             "\n1. Ordenar por nombre de A a la Z"
@@ -48,6 +45,8 @@ def menu_tipo_orden_lista():
             "\n6. Ordenar por fecha de inicio mas Antigua a mas Alta")
 
 def mostrar_menu():
+    """Esta funcion es el menu principal del programa, permite navegar por todo el programa , realizar cambios y reportes
+    """
     lista_parseada = parseo_csv("data\Proyectos.csv")
     parsear_lista_json(lista_parseada)
     datos_normalizado = normalizar_datos(lista_parseada)
@@ -62,10 +61,14 @@ def mostrar_menu():
             match ingreso_opcion:
                 case 1:
                     limpiar_consola()
-                    nuevo_proyecto = crear_proyecto()
-                    parsear_lista_csv(lista_parseada)
-                    if nuevo_proyecto == True:
-                        print("El proyecto se a creado con exito")
+                    cantidad_max_proyectos_activos = verificar_cantidad_proyectos(lista_parseada)
+                    if cantidad_max_proyectos_activos == True:
+                        nuevo_proyecto = crear_proyecto()
+                        parsear_lista_csv(lista_parseada)
+                        if nuevo_proyecto == True:
+                            print("El proyecto se a creado con exito")
+                    else:
+                        print("Alcanzo la cantidad maxima de 50 proyectos activos, debe cancelar o finalizar proyectos para poder ingresar nuevos proyectos")
                 case 2:
                     limpiar_consola()
                     imprimir_todos_proyectos(lista_parseada)
@@ -143,7 +146,7 @@ def mostrar_menu():
                     retomar_proyecto(lista_parseada)
                     parsear_lista_json(lista_parseada)
                     parsear_lista_csv(lista_parseada)
-                
+                    
                 case 10:
                     limpiar_consola()
                     imprimir_todos_proyectos(lista_parseada)
@@ -158,4 +161,11 @@ def mostrar_menu():
                     parsear_lista_csv(lista_parseada)
                     finalizar_programa()
                 case 13:
-                    pass
+                    limpiar_consola()
+                    imprimir_proyectos_palabras_desarrollo(lista_parseada)
+                case 14:
+                    limpiar_consola()
+                    top_tres_proyectos_activos(lista_parseada)
+                case _:
+                    print("La opcion ingresada es incorrecta, intentelo nuevamente")
+                    limpiar_consola()

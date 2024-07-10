@@ -1,17 +1,71 @@
 id,Nombre del Proyecto,Descripción,Fecha de inicio,Fecha de Fin,Presupuesto,Estado
 4,Red de Transporte Publico,Mejora y ampliación de la infraestructura de transporte público,30-03-2023,24-07-2023,937383174,Activo
 3,Sistema de Informacion Epidemiológica,Plataforma para el seguimiento y análisis de datos epidemiológicos,14-06-2023,02-02-2024,850312588,Cancelado
+70,Gestion copa america,Desarrollo de la copa america,02-01-2024,13-04-2026,789456789,Activo
 2,Sistema de Planificación de Recursos,Desarrollo de un sistema avanzado de planificación de recursos empresariales,17-07-2023,18-05-2025,642055083,Activo
 9,Investigacion de Trastornos del Sueño,Estudio y tratamiento de diversos trastornos del sueño,11-04-2023,23-11-2025,555060646,Activo
-6,Laboratorio de Microbiologia,Investigación y desarrollo en microbiología aplicada,13-07-2023,07-10-2025,325746996,Cancelado
 10,Sistema de Incendios Extremo,Desarrollo de un sistema avanzado de prevención y control de incendios,14-02-2023,03-04-2023,240045465,Finalizado
 7,Planificación de Sucesion,Desarrollo de un sistema para la planificación de la sucesión en empresas,01-01-2023,20-05-2023,231786436,Finalizado
 5,Gestion de musica,Desarrollo musical basado en codigo binario,06-06-2021,03-02-2030,149912234,Activo
+6,Laboratorio de Microbiologia,Investigación y desarrollo en microbiología aplicada,13-07-2023,07-10-2025,123456789,Cancelado
+19,Mudanza tecnologica,Mudanza de archivos registrados en otro sistema,25-04-1985,16-01-2000,99874564,Activo
 8,Sistema de Gestión de Documentos,Desarrollo de un sistema para la gestión y archivo de documentos,06-09-2023,19-05-2023,65296214,Finalizado
 1,Plataforma de Gestion Empresarial,Sistema de gestion para mejorar la produccion en la linea operativa,13-10-2023,17-04-2025,42931805,Activo
-13,Desarrollo de sistemas,Creacion de software inteligentes,13-05-2024,15-09-2035,15456456,Activo
+20,Bioinformatica,Desarrollo herramientas bioinformaticas,01-10-2024,05-12-2026,33600000,Activo
+21,Realidad Aumentada,Aplicaciones realidad aumentada,15-12-2024,20-02-2027,32700000,Cancelado
+22,Blockchain,Desarrollo aplicaciones tecnologia blockchain,01-02-2025,05-04-2027,31200000,Activo
+23,Computacion Cuantica,Investigacion computacion cuantica,15-04-2025,20-06-2027,29500000,Cancelado
+24,Internet de las Cosas IoT,Desarrollo soluciones IoT,01-06-2025,05-08-2027,28400000,Activo
+25,Biotecnologia,Investigacion biotecnologia avanzada,15-08-2025,20-10-2027,27200000,Activo
+26,Impresion Digital,Aplicaciones impresion Digital avanzada,01-10-2025,05-12-2027,26100000,Cancelado
+27,Ingenieria Aeroespacial,Desarrollo tecnologia aeroespacial,15-12-2025,20-02-2028,25200000,Activo
+28,Nanotecnologia,Investigacion nanotecnologia,01-02-2026,05-04-2028,24400000,Activo
+29,Smart Cities,Desarrollo soluciones ciudades inteligentes,15-04-2026,20-06-2028,23200000,Cancelado
+30,Medicina Regenerativa,Investigacion medicina regenerativa,01-06-2026,05-08-2028,22100000,Activo
+31,Vehiculos Autonomos,Desarrollo tecnologia vehiculos autonomos,15-08-2026,20-10-2028,21200000,Activo
+32,Energias Renovables,Investigacion energias renovables,01-10-2026,05-12-2028,20400000,Activo
+33,Agricultura Sostenible,Desarrollo tecnicas agricultura sostenible,15-12-2026,20-02-2029,19200000,Cancelado
+34,Inteligencia Artificial General,Investigacion inteligencia artificial general,01-02-2027,05-04-2029,18400000,Activo
+35,Fusion Nuclear,Investigacion tecnologia fusion nuclear,15-04-2027,20-06-2029,17200000,Activo
+36,Telemedicina,Desarrollo plataformas telemedicina,01-06-2027,05-08-2029,16100000,Activo
+13,Desarrollo de sistemas,Creacion de software inteligentes,13-05-2024,15-09-2035,15456456,Cancelado
+37,Educacion Digital,Desarrollo plataformas educacion digital,15-08-2027,20-10-2029,15200000,Activo
+38,Arquitectura Sostenible,Investigacion arquitectura sostenible,01-10-2027,05-12-2029,14400000,Activo
+39,Exploracion Espacial,Investigacion exploracion espacial,15-12-2027,20-02-2030,13200000,Activo
+40,Ciberseguridad,Desarrollo soluciones ciberseguridad,01-02-2028,05-04-2030,12400000,Activo
+41,Realidad Virtual,Aplicaciones realidad virtual avanzada,15-04-2028,20-06-2030,11200000,Activo
+42,Industria,Desarrollo soluciones industria,01-06-2028,05-08-2030,10400000,Activo
+43,Aquacultura,Investigacion tecnologia acuicultura,15-08-2028,20-10-2030,9200000,Cancelado
 15,Recuento de explosivos,Recuento de municiones de alto calibre,01-02-2023,29-01-2026,8521475,Activo
-12,Distribucion de recursos,Reparto de materiales de produccion,13-05-1999,13-05-2023,1500654,Finalizado
-14,Creacion de videojuegos,Desarrollo de sistemas ludicas,13-05-2021,13-06-2029,789456,Activo
-11,Gestion de dinero,Gestion de recursos economicos,13-05-1998,13-12-2021,756045,Activo
+44,Baterias Avanzadas,Desarrollo tecnologia baterias avanzadas,01-10-2028,05-12-2030,8400000,Finalizado
 16,Gestion de musica,Conteo de instrumentos en las instituciones,03-07-2023,14-09-2029,7894569,Activo
+45,Ingenieria Biomedica,Investigacion ingenieria biomedica,15-12-2028,20-02-2031,7200000,Activo
+46,Logistica Inversa,Desarrollo soluciones logistica inversa,01-02-2029,05-04-2031,6400000,Cancelado
+47,Impresion Organica,Investigacion impresion organica,15-04-2029,20-06-2031,5600000,Activo
+48,Energia Oceanica,Desarrollo tecnologia energia oceanica,01-06-2029,05-08-2031,4800000,Cancelado
+49,Smart Grids,Desarrollo redes electricas inteligentes,15-08-2029,20-10-2031,4000000,Cancelado
+50,Computacion Biomolecular,Investigacion computacion biomolecular,01-10-2029,05-12-2031,3200000,Activo
+51,Investigacion Tecnologias Emergentes,Investigacion tecnologias emergentes,15-12-2029,20-02-2032,2800000,Activo
+52,Ingenieria Lunar,Desarrollo tecnologia exploracion lunar,01-02-2030,05-04-2032,2400000,Activo
+53,Agricultura Vertical,Investigacion agricultura vertical urbana,15-04-2030,20-06-2032,2000000,Activo
+54,Neurociencia Computacional,Investigacion neurociencia computacional,01-06-2030,05-08-2032,1600000,Activo
+12,Distribucion de recursos,Reparto de materiales de produccion,13-05-1999,13-05-2023,1500654,Finalizado
+55,Internet Cuantica,Desarrollo internet cuantica,15-08-2030,20-10-2032,1200000,Cancelado
+56,Bioimpresion,Investigacion bioimpresion organos,01-10-2030,05-12-2032,1000000,Activo
+57,Ingenieria Oceánica,Desarrollo tecnologia ingenieria oceanica,15-12-2030,20-02-2033,900000,Activo
+58,Ciudades Flotantes,Investigacion ciudades flotantes,01-02-2031,05-04-2033,850000,Activo
+59,Turismo Espacial,Desarrollo tecnologia turismo espacial,15-04-2031,20-06-2033,800000,Cancelado
+14,Creacion de videojuegos,Desarrollo de sistemas ludicas,13-05-2021,13-06-2029,789456,Activo
+17,Gestion de filamento,Desarrollo de filamento pla,20-05-2024,21-03-2026,789456,Activo
+18,Fabrica alfajores,Desarrollo de alfajores con dulce de leche,13-08-2022,13-05-2029,789455,Cancelado
+11,Gestion de dinero,Gestion de recursos economicos,13-05-1998,13-12-2021,756045,Activo
+60,Biología Sintética,Investigacion biologia sintetica,01-06-2031,05-08-2033,750000,Activo
+61,Exploración Oceánica,Investigacion exploracion oceanica,15-08-2031,20-10-2033,700000,Activo
+62,Energía Geotérmica,Desarrollo tecnologia energia geotermica,01-10-2031,05-12-2033,650000,Activo
+63,Energía Solar Avanzada,Investigacion energia solar avanzada,15-12-2031,20-02-2034,600000,Cancelado
+64,Nuevos Materiales,Desarrollo nuevos materiales,01-02-2032,05-04-2034,550000,Activo
+65,Ingeniería Genética,Investigacion ingenieria genetica avanzada,15-04-2032,20-06-2034,520000,Activo
+66,Impresión Cuantica,Desarrollo tecnologia impresion Cuantica,01-06-2032,05-08-2034,510000,Activo
+67,Energía Mareomotriz,Investigacion energia mareomotriz,15-08-2032,20-10-2034,505000,Activo
+68,Robótica Avanzada,Desarrollo tecnologia robotica avanzada,01-10-2032,05-12-2034,501000,Activo
+69,Nanotecnología Médica,Investigacion nanotecnologia medica,15-12-2032,20-02-2035,500500,Finalizado

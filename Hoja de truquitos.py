@@ -1,6 +1,6 @@
 '''
 alert = showinfo manda una ventana emergente utilizando tkinter se importa como "showinfo"{
- se le puede ingresar titulo con "title=str" y un mensaje con "message=str"}
+se le puede ingresar titulo con "title=str" y un mensaje con "message=str"}
 
 question = askyesno similar al alert() pero para preguntar al usuario una confirmacion o rechazo, resultado puede ser true o false, utilizando tkinter se importa como "askyesno" y va dentro de una variable por ejemplo "result = question(title="question", message="desea continuar?") ".  
 

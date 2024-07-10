@@ -10,12 +10,15 @@ def limpiar_consola():
     """
     os.system("cls")
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def finalizar_programa():
     """Esta funcion finaliza el programa
     """
     print("programa finalizado")
     sys.exit()
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def validar_ingreso_nombre_proyecto_descripcion(nombre_descripcion: str, limite_caracter: int):
     """Esta funcion valida el ingreso del nombre del proyecto, que no contenga numeros ni puntos 
@@ -37,6 +40,7 @@ def validar_ingreso_nombre_proyecto_descripcion(nombre_descripcion: str, limite_
     
     return identificacion_proyecto_descripcion
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def validar_nombre(mensaje_nombre:str, cantidad_caracteres:int):
     """Esta funcion valida que el nombre ingresado sea no superior a la cantidad de caracteres que se quiera
@@ -55,6 +59,7 @@ def validar_nombre(mensaje_nombre:str, cantidad_caracteres:int):
         else:
             print("El nombre no debe contener numeros, intentelo nuevamente")
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def validar_descripcion(mensaje_descripcion:str,cantidad_caracteres:int):
     """Esta funcion valida que la descripcion del proyecto sea str y no mayor a la cantidad de caracteres que se desee
@@ -73,6 +78,8 @@ def validar_descripcion(mensaje_descripcion:str,cantidad_caracteres:int):
         else:
             print("La descripcion del proyecto no debe contener ser mas de 200 caracteres, intentelo nuevamente")
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 def ingresar_opcion(mensaje:str):
     opcion = input(mensaje)
     if opcion.isnumeric() and '.' not in opcion and type(int(opcion)) == int:
@@ -81,7 +88,7 @@ def ingresar_opcion(mensaje:str):
     else:
         return -1
 
-
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def validar_entero(numero: str):
     """Esta funcion valida si el numero ingresado es un entero o no
@@ -97,6 +104,7 @@ def validar_entero(numero: str):
     else:
         return False
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------
 def ingresar_fechas_proyecto():
@@ -115,7 +123,7 @@ def ingresar_fechas_proyecto():
         else:
             print("Error. La fecha de inicio no puede ser mayor o igual que la fecha de finalizacion, intente nuevamente")
 
-
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def ingresar_fecha(mensaje_fecha:str):
     """Esta funcion le permite al usuario ingresar una fecha, si corresponde al formato dd-mm-YYYY esta bien, si esta mal ingresado se lo pedira nuevamente
@@ -145,11 +153,9 @@ def ingresar_fecha(mensaje_fecha:str):
         except ValueError:
             print("Fecha invalida, asegurese de ingresar la fecha en el formato de: dia/mes/año(2000)")
 
-
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-def cambiar_estado():
+def cambiar_estado(lista_proyecto:list[dict]):
     """Esta función permite al usuario seleccionar y modificar el estado de un proyecto.
 
     La función solicita al usuario ingresar un estado válido entre "Activo", "Cancelado" o "Finalizado".
@@ -163,10 +169,15 @@ def cambiar_estado():
     
     while ingreso_estado not in estado:
         ingreso_estado = input("Error: El estado ingresado no existe. Ingrese el estado nuevamente, puede seleccionar entre Activo, Cancelado, Finalizado: ").capitalize()
-    
+    if ingreso_estado == "Activo":
+        cantidad_maxima_proyectos_activos = verificar_cantidad_proyectos(lista_proyecto)
+        if cantidad_maxima_proyectos_activos == True:
+            return ingreso_estado
+        else:
+            return False
     return ingreso_estado
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def validar_id(proyectos: list[dict]):
     """Esta función busca el ID más grande dentro de una lista de diccionarios para ingresar uno nuevo y sumarle +1 al mismo.
@@ -203,9 +214,21 @@ def validar_cantidad_proyectos(lista_proyectos:list[dict]):
         return False
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 def buscar_proyecto_por_nombre(mensaje):
+    """
+    Esta función solicita al usuario ingresar el nombre de un proyecto mediante un mensaje proporcionado.
+
+    Args:
+        mensaje (str): El mensaje que se le mostrará al usuario para que ingrese el nombre del proyecto.
+
+    Returns:
+        str: El nombre del proyecto ingresado por el usuario.
+    """
     ingresar_nombre_proyecto = input(mensaje)
     return ingresar_nombre_proyecto
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def buscar_proyecto_id_str(valor: int | str, lista_proyectos: list[dict], key: str):
     """Esta función busca un valor en la lista de diccionarios para poder retornar el diccionario con el mismo.
@@ -232,8 +255,6 @@ def buscar_proyecto_id_str(valor: int | str, lista_proyectos: list[dict], key: s
         buscar_id = buscar_proyecto_id_str(buscar_por_id,lista_repetidos,"id")
         return buscar_id
 
-
-
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def validar_presupuesto():
@@ -250,9 +271,6 @@ def validar_presupuesto():
         validar_presupuesto = validar_entero(ingreso_presupuesto)
         
     return int(ingreso_presupuesto)
-
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -315,6 +333,7 @@ def parsear_fecha_datetime(lista: list[dict], fecha_inicio_fin:str):
         diccionario[fecha_inicio_fin] = fecha_fin_datetime
     return lista
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def ordenar_fechas(lista_proyectos:list[dict],tipo_orden:bool):
     lista_fecha_datetime = parsear_fecha_datetime(lista_proyectos, "Fecha de inicio")
@@ -417,6 +436,7 @@ def normalizar_datos(lista_proyectos: list[dict]):
         
     return flag_dato_modificado
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def promedio_presupuestos_proyectos(lista_proyectos: list[dict]):
     """Esta función calcula el promedio de los presupuestos de los proyectos.
@@ -437,6 +457,7 @@ def promedio_presupuestos_proyectos(lista_proyectos: list[dict]):
     promedio_presupuestos = acumulador_presupuestos / contador_proyectos
     return int(promedio_presupuestos)
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def ordenar_lista_diccionarios(lista_proyectos: list[dict], orden: bool, valor_a_ordenar: str):
     """Esta función ordena una lista de diccionarios en función de un valor especificado.
@@ -466,24 +487,33 @@ def ordenar_lista_diccionarios(lista_proyectos: list[dict], orden: bool, valor_a
     else: 
         print("No indico el valor a ordenar")
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 def retomar_proyecto(lista_proyectos:list[dict]):
     """Esta funcion retoma todos los proyectos que esten Cancelados y los pasa a Activo
 
     Args:
         lista_proyectos (list[dict]): Lista de diccionarios para iterar y recorrer
     """
-    id_proyecto = int(input("Ingrese el ID del proyecto a retomar: "))
-    for proyecto in lista_proyectos:
-        if proyecto["id"] == id_proyecto:
-            if proyecto["Estado"] == "Cancelado":
-                proyecto["Estado"] = "Activo"
-                print("Proyecto retomado correctamente.")
-                return
-            else:
-                print("El proyecto no se puede retomar porque no está cancelado.")
-                return
-    print("ID de proyecto no encontrado.")
+    maximos_activos = verificar_cantidad_proyectos(lista_proyectos)
+    if maximos_activos == True:
+        id_proyecto = int(input("Ingrese el ID del proyecto a retomar: "))
+        for proyecto in lista_proyectos:
+            if proyecto["id"] == id_proyecto:
+                if proyecto["Estado"] == "Cancelado":
+                    proyecto["Estado"] = "Activo"
+                    limpiar_consola()
+                    print("Proyecto retomado correctamente.")
+                    print("Actualice la vista para ver reflejados los cambios con opcion 5")
+                    return
+                else:
+                    print("El proyecto no se puede retomar porque no está cancelado.")
+                    return
+        print("ID de proyecto no encontrado.")
+    else:
+        print("Alcanzo la cantidad maxima de 50 proyectos activos, debe cancelar o finalizar proyectos para poder ingresar nuevos proyectos")
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def obtener_fecha_actual():
     """Obtiene la fecha actual sin la hora.
@@ -493,3 +523,88 @@ def obtener_fecha_actual():
     """
     fecha_actual = datetime.today().date()
     return fecha_actual.strftime("%d-%m-%Y")
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+def imprimir_proyectos_palabras_desarrollo(lista_proyectos: list[dict]):
+    """Imprime los proyectos que contienen la palabra "desarrollo" en su descripción y que están cancelados,
+    mostrando aquellos con el menor presupuesto, o todos en caso de empate.
+
+    Args:
+        lista_proyectos (list[dict]): Lista de proyectos representados como diccionarios.
+    """
+    lista_proyectos_palabra_desarrollo = []
+    ordenar_lista_diccionarios(lista_proyectos,True,"Presupuesto")
+    for proyecto in lista_proyectos:
+        lista_palabra_desarrollo = proyecto["Descripción"].split(" ")
+        for palabra in lista_palabra_desarrollo:
+            if palabra.lower() == "desarrollo" and proyecto["Estado"] == "Cancelado":
+                lista_proyectos_palabra_desarrollo.append(proyecto)
+    
+    if len(lista_proyectos_palabra_desarrollo) == 0:
+        print("Error, no se encontraron proyectos que en su descripción tengan la palabra Desarrollo y que estén cancelados.\n")
+    else:
+        proyecto_menor_presupuesto = lista_proyectos_palabra_desarrollo[0]
+        lista_menor_presupuesto = [proyecto_menor_presupuesto]
+
+        for i in range(1, len(lista_proyectos_palabra_desarrollo)):
+            if lista_proyectos_palabra_desarrollo[i]["Presupuesto"] < proyecto_menor_presupuesto["Presupuesto"]:
+                proyecto_menor_presupuesto = lista_proyectos_palabra_desarrollo[i]
+                lista_menor_presupuesto = [proyecto_menor_presupuesto]
+            elif lista_proyectos_palabra_desarrollo[i]["Presupuesto"] == proyecto_menor_presupuesto["Presupuesto"]:
+                lista_menor_presupuesto.append(lista_proyectos_palabra_desarrollo[i])
+
+        if len(lista_menor_presupuesto) == 1:
+            imprimir_proyecto(proyecto_menor_presupuesto)
+        else:
+            imprimir_todos_proyectos(lista_menor_presupuesto)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+def top_tres_proyectos_activos(lista_proyectos:list[dict]):
+    """Imprime los tres proyectos activos con el menor presupuesto.
+
+    Args:
+        lista_proyectos (list[dict]): Lista de proyectos representados como diccionarios.
+
+    """
+
+    lista_proyectos_activos = []
+
+    ordenar_lista_diccionarios(lista_proyectos,True,"Presupuesto")
+
+    for proyectos in lista_proyectos:
+        if proyectos["Estado"] == "Activo":
+            lista_proyectos_activos.append(proyectos)
+    
+    top_3_proyectos = lista_proyectos_activos[:3]
+
+    if len(lista_proyectos_activos) < 3:
+        print("Error, no se encontraron al menos 3 proyectos activos")
+    else:
+        imprimir_todos_proyectos(top_3_proyectos)
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+def verificar_cantidad_proyectos(lista_proyectos:list[dict]):
+    """
+    Verifica si hay al menos 50 proyectos activos en una lista de proyectos.
+
+    Args:
+        lista_proyectos (list[dict]): Lista de proyectos representados como diccionarios.
+
+    Returns:
+        bool: True si hay menos de 50 proyectos activos, False si hay al menos 50 proyectos activos.
+    """
+    contador = 0
+    for proyectos in lista_proyectos:
+        if proyectos["Estado"] == "Activo":
+            contador += 1
+    if contador >= 50:
+        return False
+    else:
+        return True
+

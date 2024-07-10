@@ -27,6 +27,7 @@ def sub_menu_modificaciones(lista_proyectos):
     if ingresar_id:   
         dict_proyecto = buscar_proyecto_id_str(ingresar_id,lista_proyectos,"id")
         while True:    
+            limpiar_consola()
             if not dict_proyecto:
                 print("No se encontro el proyecto, intentelo nuevamente")
                 break
@@ -79,15 +80,18 @@ def sub_menu_modificaciones(lista_proyectos):
                             limpiar_consola()
                             print("No se a podido modificar el presupuesto")
                     case 5:
-                        estado_ingresado = cambiar_estado()
-                        modificar_estado = modificar_proyecto("Estado",dict_proyecto,estado_ingresado)
-                        if modificar_estado == True:
-                            limpiar_consola()
-                            print("Se a modificado el estado del proyecto")
-                            flag_modificacion = True
+                        estado_ingresado = cambiar_estado(lista_proyectos)
+                        if estado_ingresado:
+                            modificar_estado = modificar_proyecto("Estado",dict_proyecto,estado_ingresado)
+                            if modificar_estado == True:
+                                limpiar_consola()
+                                print("Se a modificado el estado del proyecto")
+                                flag_modificacion = True
+                            else:
+                                limpiar_consola()
+                                print("No se a podido modificar el estado del proyecto")
                         else:
-                            limpiar_consola()
-                            print("No se a podido modificar el estado del proyecto")
+                            print("Debe cancelar o finalizar proyectos para poder pasar a activo, se alcanzaron los 50 activos")
                     case 6:
                         finalizar_modificacion = input("Elija una opcion: \n1. Continuar modificando\n2. Finalizar modificacion, guardar y volver al menu principal\nOpcion: ")
                         if finalizar_modificacion == "1":
