@@ -73,7 +73,7 @@ def validar_descripcion(mensaje_descripcion:str,cantidad_caracteres:int):
     """
     while True:
         descripcion_proyecto = input(mensaje_descripcion)
-        if descripcion_proyecto.replace(" ","") and len(descripcion_proyecto) < cantidad_caracteres:
+        if descripcion_proyecto.replace(" ","").isalpha() and len(descripcion_proyecto) < cantidad_caracteres:
             return descripcion_proyecto
         else:
             print("La descripcion del proyecto no debe contener ser mas de 200 caracteres, intentelo nuevamente")
