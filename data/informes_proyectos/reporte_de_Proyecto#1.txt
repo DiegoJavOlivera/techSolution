@@ -1,0 +1,61 @@
+Reporte #1
+Fecha de solicitud: 09-07-2024
+Datos del proyecto buscado: 
+ID: 57, Nombre: Ingenieria Oceánica, Presupuesto: 900000
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Archivos con presupuesto superiores al buscado:
+
+ID: 4, Nombre: Red de Transporte Publico, Presupuesto: 937383174
+ID: 3, Nombre: Sistema de Informacion Epidemiológica, Presupuesto: 850312588
+ID: 70, Nombre: Gestion copa america, Presupuesto: 789456789
+ID: 2, Nombre: Sistema de Planificación de Recursos, Presupuesto: 642055083
+ID: 9, Nombre: Investigacion de Trastornos del Sueño, Presupuesto: 555060646
+ID: 10, Nombre: Sistema de Incendios Extremo, Presupuesto: 240045465
+ID: 7, Nombre: Planificación de Sucesion, Presupuesto: 231786436
+ID: 5, Nombre: Gestion de musica, Presupuesto: 149912234
+ID: 6, Nombre: Laboratorio de Microbiologia, Presupuesto: 123456789
+ID: 19, Nombre: Mudanza tecnologica, Presupuesto: 99874564
+ID: 8, Nombre: Sistema de Gestión de Documentos, Presupuesto: 65296214
+ID: 1, Nombre: Plataforma de Gestion Empresarial, Presupuesto: 42931805
+ID: 20, Nombre: Bioinformatica, Presupuesto: 33600000
+ID: 21, Nombre: Realidad Aumentada, Presupuesto: 32700000
+ID: 22, Nombre: Blockchain, Presupuesto: 31200000
+ID: 23, Nombre: Computacion Cuantica, Presupuesto: 29500000
+ID: 24, Nombre: Internet de las Cosas IoT, Presupuesto: 28400000
+ID: 25, Nombre: Biotecnologia, Presupuesto: 27200000
+ID: 26, Nombre: Impresion Digital, Presupuesto: 26100000
+ID: 27, Nombre: Ingenieria Aeroespacial, Presupuesto: 25200000
+ID: 28, Nombre: Nanotecnologia, Presupuesto: 24400000
+ID: 29, Nombre: Smart Cities, Presupuesto: 23200000
+ID: 30, Nombre: Medicina Regenerativa, Presupuesto: 22100000
+ID: 31, Nombre: Vehiculos Autonomos, Presupuesto: 21200000
+ID: 32, Nombre: Energias Renovables, Presupuesto: 20400000
+ID: 33, Nombre: Agricultura Sostenible, Presupuesto: 19200000
+ID: 34, Nombre: Inteligencia Artificial General, Presupuesto: 18400000
+ID: 35, Nombre: Fusion Nuclear, Presupuesto: 17200000
+ID: 36, Nombre: Telemedicina, Presupuesto: 16100000
+ID: 13, Nombre: Desarrollo de sistemas, Presupuesto: 15456456
+ID: 37, Nombre: Educacion Digital, Presupuesto: 15200000
+ID: 38, Nombre: Arquitectura Sostenible, Presupuesto: 14400000
+ID: 39, Nombre: Exploracion Espacial, Presupuesto: 13200000
+ID: 40, Nombre: Ciberseguridad, Presupuesto: 12400000
+ID: 41, Nombre: Realidad Virtual, Presupuesto: 11200000
+ID: 42, Nombre: Industria, Presupuesto: 10400000
+ID: 43, Nombre: Aquacultura, Presupuesto: 9200000
+ID: 15, Nombre: Recuento de explosivos, Presupuesto: 8521475
+ID: 44, Nombre: Baterias Avanzadas, Presupuesto: 8400000
+ID: 16, Nombre: Gestion de musica, Presupuesto: 7894569
+ID: 45, Nombre: Ingenieria Biomedica, Presupuesto: 7200000
+ID: 46, Nombre: Logistica Inversa, Presupuesto: 6400000
+ID: 47, Nombre: Impresion Organica, Presupuesto: 5600000
+ID: 48, Nombre: Energia Oceanica, Presupuesto: 4800000
+ID: 49, Nombre: Smart Grids, Presupuesto: 4000000
+ID: 50, Nombre: Computacion Biomolecular, Presupuesto: 3200000
+ID: 51, Nombre: Investigacion Tecnologias Emergentes, Presupuesto: 2800000
+ID: 52, Nombre: Ingenieria Lunar, Presupuesto: 2400000
+ID: 53, Nombre: Agricultura Vertical, Presupuesto: 2000000
+ID: 54, Nombre: Neurociencia Computacional, Presupuesto: 1600000
+ID: 12, Nombre: Distribucion de recursos, Presupuesto: 1500654
+ID: 55, Nombre: Internet Cuantica, Presupuesto: 1200000
+ID: 56, Nombre: Bioimpresion, Presupuesto: 1000000
+ID: 71, Nombre: Clases particulares, Presupuesto: 7894561

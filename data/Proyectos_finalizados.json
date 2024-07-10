@@ -1,11 +1,20 @@
 [
     {
-        "id": 10,
-        "Nombre del Proyecto": "Sistema de Incendios Extremo",
-        "Descripción": "Desarrollo de un sistema avanzado de prevención y control de incendios",
-        "Fecha de inicio": "14-02-2023",
-        "Fecha de Fin": "03-04-2023",
-        "Presupuesto": 240045465,
+        "id": 3,
+        "Nombre del Proyecto": "Sistema de Informacion Epidemiológica",
+        "Descripción": "Plataforma para el seguimiento y análisis de datos epidemiológicos",
+        "Fecha de inicio": "14-06-2023",
+        "Fecha de Fin": "02-02-2024",
+        "Presupuesto": 850312588,
+        "Estado": "Finalizado"
+    },
+    {
+        "id": 4,
+        "Nombre del Proyecto": "Red de Transporte Publico",
+        "Descripción": "Mejora y ampliación de la infraestructura de transporte público",
+        "Fecha de inicio": "30-03-2023",
+        "Fecha de Fin": "24-07-2023",
+        "Presupuesto": 937383174,
         "Estado": "Finalizado"
     },
     {
@@ -27,12 +36,21 @@
         "Estado": "Finalizado"
     },
     {
-        "id": 44,
-        "Nombre del Proyecto": "Baterias Avanzadas",
-        "Descripción": "Desarrollo tecnologia baterias avanzadas",
-        "Fecha de inicio": "01-10-2028",
-        "Fecha de Fin": "05-12-2030",
-        "Presupuesto": 8400000,
+        "id": 10,
+        "Nombre del Proyecto": "Sistema de Incendios Extremo",
+        "Descripción": "Desarrollo de un sistema avanzado de prevención y control de incendios",
+        "Fecha de inicio": "14-02-2023",
+        "Fecha de Fin": "03-04-2023",
+        "Presupuesto": 240045465,
+        "Estado": "Finalizado"
+    },
+    {
+        "id": 11,
+        "Nombre del Proyecto": "Gestion de dinero",
+        "Descripción": "Gestion de recursos economicos",
+        "Fecha de inicio": "13-05-1998",
+        "Fecha de Fin": "13-12-2021",
+        "Presupuesto": 756045,
         "Estado": "Finalizado"
     },
     {
@@ -45,12 +63,21 @@
         "Estado": "Finalizado"
     },
     {
-        "id": 69,
-        "Nombre del Proyecto": "Nanotecnología Médica",
-        "Descripción": "Investigacion nanotecnologia medica",
-        "Fecha de inicio": "15-12-2032",
-        "Fecha de Fin": "20-02-2035",
-        "Presupuesto": 500500,
+        "id": 19,
+        "Nombre del Proyecto": "Mudanza tecnologica",
+        "Descripción": "Mudanza de archivos registrados en otro sistema",
+        "Fecha de inicio": "25-04-1985",
+        "Fecha de Fin": "16-01-2000",
+        "Presupuesto": 99874564,
+        "Estado": "Finalizado"
+    },
+    {
+        "id": 44,
+        "Nombre del Proyecto": "Baterias Avanzadas",
+        "Descripción": "Desarrollo tecnologia baterias avanzadas",
+        "Fecha de inicio": "01-10-2028",
+        "Fecha de Fin": "05-12-2030",
+        "Presupuesto": 8400000,
         "Estado": "Finalizado"
     }
 ]

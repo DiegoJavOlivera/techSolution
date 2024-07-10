@@ -27,7 +27,7 @@ def sub_menu_modificaciones(lista_proyectos):
     if ingresar_id:   
         dict_proyecto = buscar_proyecto_id_str(ingresar_id,lista_proyectos,"id")
         while True:    
-            limpiar_consola()
+
             if not dict_proyecto:
                 print("No se encontro el proyecto, intentelo nuevamente")
                 break
@@ -91,6 +91,7 @@ def sub_menu_modificaciones(lista_proyectos):
                                 limpiar_consola()
                                 print("No se a podido modificar el estado del proyecto")
                         else:
+                            limpiar_consola()
                             print("Debe cancelar o finalizar proyectos para poder pasar a activo, se alcanzaron los 50 activos")
                     case 6:
                         finalizar_modificacion = input("Elija una opcion: \n1. Continuar modificando\n2. Finalizar modificacion, guardar y volver al menu principal\nOpcion: ")

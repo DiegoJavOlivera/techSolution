@@ -69,13 +69,13 @@ def parsear_lista_json(lista_proyectos: list[dict]):
         bool: Retorna True para verificar.
     """
     PATH_json = "./data/Proyectos_finalizados.json"
-    proyectos_cancelados = []
+    proyectos_finalizados = []
     for proyectos in lista_proyectos:
         if proyectos["Estado"] == "Finalizado":
-            proyectos_cancelados.append(proyectos)
+            proyectos_finalizados.append(proyectos)
 
     with open(PATH_json, "w", encoding="utf-8") as archivo:
-        json.dump(proyectos_cancelados, archivo, ensure_ascii=False, indent=4)
+        json.dump(proyectos_finalizados, archivo, ensure_ascii=False, indent=4)
 
     return True
 

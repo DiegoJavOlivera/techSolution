@@ -299,7 +299,7 @@ def modificar_proyecto(key:int|str, proyecto:dict, valor:str,):
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-def cancelar_proyecto():
+def cancelar_proyecto(lista_proyecto:list[dict]):
     """Esta funcion busca un diccionario con un id, al encontrarlo modifica su estado a cancelado
 
     Returns:
@@ -308,7 +308,7 @@ def cancelar_proyecto():
     id_proyecto_cancelar = input("Ingrese el id del proyecto que desea cancelar: ")
     validar_id_proyecto = validar_entero(id_proyecto_cancelar)
     if validar_id_proyecto:
-        buscar_proyecto = buscar_proyecto_id_str(id_proyecto_cancelar,LISTA_PROYECTOS,"id")
+        buscar_proyecto = buscar_proyecto_id_str(id_proyecto_cancelar,lista_proyecto,"id")
         if buscar_proyecto:
             buscar_proyecto["Estado"] = "Cancelado"
             return True

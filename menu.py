@@ -42,7 +42,9 @@ def menu_tipo_orden_lista():
             "\n3. Ordenar por presupuesto de mayor a menor"
             "\n4. Ordenar por presupuesto de menor a mayor"
             "\n5. Ordenar por fecha de inicio mas Alta a mas Antigua"
-            "\n6. Ordenar por fecha de inicio mas Antigua a mas Alta")
+            "\n6. Ordenar por fecha de inicio mas Antigua a mas Alta"
+            "\n7. Ordenar por id de mayor a menor"
+            "\n8. Ordenar por id de menor a mayor")
 
 def mostrar_menu():
     """Esta funcion es el menu principal del programa, permite navegar por todo el programa , realizar cambios y reportes
@@ -74,7 +76,8 @@ def mostrar_menu():
                     imprimir_todos_proyectos(lista_parseada)
                     modificar_proyecto = sub_menu_modificaciones(lista_parseada)
                 case 3:
-                    id_proyecto_cancelar = cancelar_proyecto()
+                    imprimir_todos_proyectos(lista_parseada)
+                    id_proyecto_cancelar = cancelar_proyecto(lista_parseada)
                     if id_proyecto_cancelar == True:
                         limpiar_consola()
                         print("El estado del projecto fue cambiado a cancelado\n\n")
@@ -137,6 +140,14 @@ def mostrar_menu():
                             limpiar_consola()
                             lista_ordenada_fecha_inicio_men_may = ordenar_fechas(lista_parseada, True)
                             imprimir_todos_proyectos(lista_ordenada_fecha_inicio_men_may)
+                        case 7:
+                            limpiar_consola()
+                            lista_ordenada_id_may_men = ordenar_lista_diccionarios(lista_parseada,True,"id")
+                            imprimir_todos_proyectos(lista_ordenada_id_may_men)
+                        case 8:
+                            limpiar_consola()
+                            lista_ordenada_id_men_may = ordenar_lista_diccionarios(lista_parseada,False,"id")
+                            imprimir_todos_proyectos(lista_ordenada_id_men_may)
                         case _:
                             limpiar_consola()
                             print("La opcion ingresada es incorrecta")
