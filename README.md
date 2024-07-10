@@ -25,5 +25,5 @@ pip install prettytable
 ```
 
 
-# Contacto
-# Para más información, puedes contactarme a través de mi correo electrónico: diegolivera93@gmail.com
+Contacto
+Para más información, puedes contactarme a través de mi correo electrónico: diegolivera93@gmail.com
